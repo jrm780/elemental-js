@@ -16,7 +16,7 @@ myDiv.addEventListener("click", event => alert("myDiv was clicked"))
 ```
 
 ## el.h()
-Create a new element
+Create a new HTML DOM element
 #### Parameters
 - `tag (string)` - the type/tag of the element to construct
 - `attributes (Object)` - `{"key": "value", ...}` attributes the element should have
