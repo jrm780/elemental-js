@@ -1,5 +1,5 @@
 # elemental-js
-A tiny DOM creation and manipulation library for use with vanilla JavaScript
+A tiny (520 bytes) and fast DOM manipulation library for use with plain JavaScript
 
 # API
 ## el.el()
@@ -101,4 +101,47 @@ el.clearElement(myDiv)
 // After:
 // <div id="myDiv">
 // </div>
+```
+
+# Benchmarks
+*Measuring operations per second (higher is better) in Chrome 59.0.3071 / Windows 10 0.0.0*
+## Select
+#### elemental-js: 12,351,821 Ops/sec
+```javascript
+const myDiv = el.el("#myDiv")
+```
+#### jQuery 3.2: 2,081,431 Ops/sec
+```javascript
+const myDiv = $("#myDiv")
+```
+
+## Clear
+#### elemental-js: 76,287,755 Ops/sec
+```javascript
+el.clearElement(myDiv)
+```
+#### jQuery 3.2: 2,191,646 Ops/sec
+```javascript
+myDiv.empty()
+```
+#### innerHTML: 442,922 Ops/sec
+```javascript
+myDiv.innerHTML = ""
+```
+
+## Create/append
+#### elemental-js: 150,784 Ops/sec
+```javascript
+el.append(myDiv, [
+  "testing ",
+  el.h("a", {href: "http://example.com"}, ["link"])
+])
+```
+#### jQuery 3.2: 59,799 Ops/sec
+```javascript
+myDiv.html('testing <a href="http://example.com">link</a>');
+```
+#### innerHTML: 86,772 Ops/sec
+```javascript
+myDiv.innerHTML = '<a href="http://example.com">link</a>'
 ```
