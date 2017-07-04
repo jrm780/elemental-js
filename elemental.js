@@ -61,7 +61,7 @@ export default {
 }
 
 function append(el, children) {
-    for (var i = 0; i < children.length; ++i) {
+    for (let i = 0; i < children.length; ++i) {
         if (typeof children[i] === 'string' || typeof children[i] === 'number') {
             el.appendChild(document.createTextNode(children[i]))
         } else {
