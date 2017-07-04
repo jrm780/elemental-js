@@ -105,6 +105,14 @@ el.clearElement(myDiv)
 
 # Benchmarks
 *Measuring operations per second (higher is better) in Chrome 59.0.3071 / Windows 10 0.0.0*
+
+## Summary
+|              | Select (Ops/sec) | Clear (Ops/sec) | Create/Append (Ops/sec) |
+|:-------------|-----------------:|----------------:|------------------------:|
+| elemental-js | 12,351,821       | 76,287,755      | 150,784                 |
+| jQuery 3.2   | 2,081,431        | 2,191,646       | 59,799                  |
+| innerHTML    |                  | 442,922         | 86,772                  |
+
 ## Select
 #### elemental-js: 12,351,821 Ops/sec
 ```javascript
