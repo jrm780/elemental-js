@@ -48,7 +48,8 @@ Append child elements to another element
 #### Example
 ```javascript
 // Before:
-// <div id="myDiv"></div>
+// <div id="myDiv">
+// </div>
 
 const myDiv = el.el("#myDiv")
 el.append(myDiv, [
@@ -56,7 +57,9 @@ el.append(myDiv, [
 ])
 
 // After:
-// <div id="myDiv"><p>Hello, World!</p></div>
+// <div id="myDiv">
+//   <p>Hello, World!</p>
+// </div>
 ```
 
 ## el.clear()
@@ -68,12 +71,15 @@ Search the document for an element with a particular CSS selector and delete all
 #### Example
 ```javascript
 // Before:
-// <div id="myDiv"><p>Hello, World!</p></div>
+// <div id="myDiv">
+//   <p>Hello, World!</p>
+// </div>
 
 const myDiv = el.clear("#myDiv")
 
 // After:
-// <div id="myDiv"></div>
+// <div id="myDiv">
+// </div>
 ```
 
 ## el.clearElement()
@@ -85,11 +91,14 @@ Delete all of the given element's child elements
 #### Example
 ```javascript
 // Before:
-// <div id="myDiv"><p>Hello, World!</p></div>
+// <div id="myDiv">
+//   <p>Hello, World!</p>
+// </div>
 
 const myDiv = el.el("#myDiv")
 el.clearElement(myDiv)
 
 // After:
-// <div id="myDiv"></div>
+// <div id="myDiv">
+// </div>
 ```
