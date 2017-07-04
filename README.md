@@ -10,7 +10,11 @@ Search the document for an element with a particular CSS selector
 `(HTMLElement)` the first matching element
 #### Example
 ```javascript
-// Find the div with id="myDiv"
+// <div class="content">
+//   <div id="myDiv">
+//     We want to add a click event listener to this div
+//   </div>
+// </div>
 const myDiv = el.el("#myDiv")
 myDiv.addEventListener("click", event => alert("myDiv was clicked"))
 ```
