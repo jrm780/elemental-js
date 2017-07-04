@@ -143,5 +143,5 @@ myDiv.html('testing <a href="http://example.com">link</a>');
 ```
 #### innerHTML: 86,772 Ops/sec
 ```javascript
-myDiv.innerHTML = '<a href="http://example.com">link</a>'
+myDiv.innerHTML = 'testing <a href="http://example.com">link</a>'
 ```
